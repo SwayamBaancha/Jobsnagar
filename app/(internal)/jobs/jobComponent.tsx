@@ -21,7 +21,7 @@ console.log('idu', selected);
   return (
     <>
       <div className="border-2 rounded-xl shadow-xl p-6 mb-6">
-        {jobData.map((item: any) => {
+        {jobData ? jobData.map((item: any) => {
           const timeAgo = formatDistanceToNow(item?.createdAt, {
             addSuffix: true,
           });
@@ -77,7 +77,9 @@ console.log('idu', selected);
               </button>
             </div>
           );
-        })}
+        }) : <>
+          <p>No Jobs Available</p>
+        </>}
         <div className="text-center">
           <Pagination page={currPage} pages={total} changePage={changePage} />
         </div>
