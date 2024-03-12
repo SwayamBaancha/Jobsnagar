@@ -5,7 +5,7 @@ const cookies = new Cookies();
 const token = cookies.get("token");
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "http://103.159.84.124:3001",
   headers: {
     Authorization: `Bearer ${token}`,
   },
