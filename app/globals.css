@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+  /* linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+.main-heading {
+  @apply text-indigo-800 text-center font-semibold text-3xl lg:text-4xl pt-5 my-4 uppercase;
+  /* @apply text-left text-3xl sm:text-5xl sm:max-w-full my-4 md:text-center font-semibold uppercase text-indigo-800 */
+  /* text-center font-bold text-xl uppercase md:text-2xl m-3 */
+}
+.btn {
+  @apply mr-3 mt-2 select-none font-semibold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 px-4 rounded-lg bg-indigo-800 text-white shadow-md shadow-indigo-900/10 hover:bg-indigo-400 hover:shadow-lg hover:shadow-blue-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none;
+}
+
+.external-field {
+  @apply border border-gray-300 bg-gray-50 sm:text-sm rounded-lg w-full p-2.5;
+}
+.field-error {
+  @apply bg-yellow-100 text-red-500 italic px-2 py-1 rounded-md self-start;
+}
+.gradient-bg {
+  @apply bg-indigo-400 sm:col-span-2 md:col-span-3 text-lg text-center font-bold p-2;
+}
+
+.input {
+  @apply block border w-full p-3 rounded mb-4 text-black;
+}
+
+.input-div {
+  @apply px-4 py-1.5;
+}
+
+.wrapper {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 shadow shadow-gray-400 mb-8;
+}
+.wrappers {
+  @apply gap-1 shadow-xl shadow-gray-400 mb-8;
+}
+
+.resume-heading {
+  @apply text-red-800 mt-2 font-bold text-sm border-b border-red-800 md:text-lg mb-2;
+}
+
+.jobs-listing-heading {
+  @apply font-bold py-2;
+}
+
+.jobs-listing-info {
+  @apply text-gray-400;
+}
+
+.pagination {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pagination button {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  padding: 7px 15px;
+}
+
+.pagination button:disabled {
+  background-color: #333;
+  color: #fff;
+  cursor: not-allowed;
+}
+@tailwind utilities;

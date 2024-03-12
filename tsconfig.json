@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(internal)/jobs/jobComponent.jsx", "app/constant.ts", "app/confirmCredits.js", "app/customTooltip.js", "app/(internal)/component/ImageComponent.js", "app/(internal)/component/ImageCropper.js", "app/(internal)/component/ImageUpload.js", "app/(internal)/component/page.js", "app/(internal)/component/dropdown/hook-dropdown.js", "app/axiosInstance.ts"],
+  "exclude": ["node_modules"]
+}
